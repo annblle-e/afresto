@@ -1,0 +1,367 @@
+<!DOCTYPE html><html lang="en"><head>
+
+<meta charset="utf-8">
+<title>Login | SMP TARAKANITA GS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="FRESTO">
+<meta name="google-signin-scope" content="profile email">
+<meta name="google-signin-client_id" content="239720633954-5j7a3citk4ecgvlsc8pjm0shqi9e295i.apps.googleusercontent.com">
+
+
+<style type="text/css">
+	
+				body {
+			padding-top: 40px;
+			padding-bottom: 40px;
+			background-color: #f5f5f5;
+			background-image: url('images/imgbin_school-supplies-notebook-illustration-png.png');
+			background-repeat: no-repeat;
+			background-position: center center;
+			
+			/*background-image: url('https://tarakanita.afresto.id/smp-gs/images/ansa/bulan-1.jpg');
+			background-repeat: no-repeat;
+			background-position: top center;*/
+		}
+		
+		.form-signin {
+			max-width: 100%;
+			padding: 19px 29px 29px;
+			margin: 0 auto 20px;
+			/*background-color: #fff;
+			border: 1px solid #e5e5e5;*/
+			
+			background-color: rgba(255, 255, 255, 0.7);
+  
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+			-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+			box-shadow: 0 1px 2px rgba(0,0,0,.05);
+			/*float: right;*/
+		}
+		.form-signin .form-signin-heading,
+		.form-signin .checkbox {
+			margin-bottom: 10px;
+		}
+		.form-signin input[type="text"],
+		.form-signin input[type="password"] {
+			font-size: 16px;
+			height: auto;
+			margin-bottom: 15px;
+			padding: 7px 9px;
+		}
+
+		#container{
+			margin-top: 20px;
+		}
+
+
+		
+		.scroll-container2 {
+		  border: 3px solid black;
+		  border-radius: 5px;
+		  overflow: hidden;
+		  background-color: rgba(255, 255, 255, 0.9);
+		}
+
+		.scroll-text {
+		  /* animation properties */
+		  -moz-transform: translateX(100%);
+		  -webkit-transform: translateX(100%);
+		  transform: translateX(100%);
+		  
+		  -moz-animation: my-animation 30s linear infinite;
+		  -webkit-animation: my-animation 30s linear infinite;
+		  animation: my-animation 30s linear infinite;
+		}
+
+		/* for Firefox */
+		@-moz-keyframes my-animation {
+		  from { -moz-transform: translateX(100%); }
+		  to { -moz-transform: translateX(-100%); }
+		}
+
+		/* for Chrome */
+		@-webkit-keyframes my-animation {
+		  from { -webkit-transform: translateX(100%); }
+		  to { -webkit-transform: translateX(-100%); }
+		}
+
+		@keyframes my-animation {
+		  from {
+			-moz-transform: translateX(100%);
+			-webkit-transform: translateX(100%);
+			transform: translateX(100%);
+		  }
+		  to {
+			-moz-transform: translateX(-100%);
+			-webkit-transform: translateX(-100%);
+			transform: translateX(-100%);
+		  }
+
+    </style>
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="https://tarakanita.afresto.id/m4n3riq/assets/bootstrap_2.3.2/js/html5shiv.js"></script>
+    <![endif]-->
+
+
+
+<meta charset="utf-8">
+<title>SMP TARAKANITA GS </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="E-Learning , LMS , Learning Management System">
+
+<meta name="author" content="Afresto Sistem Indonesia">
+<meta name="google-signin-client_id" content="239720633954-5j7a3citk4ecgvlsc8pjm0shqi9e295i.apps.googleusercontent.com">
+<!--[if lt IE 9]>
+		<script src="https://tarakanita.afresto.id/smp-gs/assets/bootswatch_cosmo/html5.js"></script>
+	<![endif]-->
+<style>
+@font-face{
+  font-family:'FontAwesome';
+  src:url('fonts/fontawesome-webfont.eot');
+  src:url('https://tarakanita.afresto.id/smp-gs//font/fontawesome-webfont-iefix.eot') format('embedded-opentype'),
+		url('fonts/fontawesome-webfont.woff') format('woff'),
+		url('fonts/fontawesome-webfont.ttf') format('truetype');
+  font-weight:normal;
+  font-style:normal }
+
+</style>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/bootswatch.css" rel="stylesheet">
+<link href="css/table-responsive.css" rel="stylesheet">
+<style>
+		.select option { color: black; }
+		.empty { color: #bbb; }
+	</style>
+<style>
+	@font-face{
+		font-family:'tinymce';
+		src:url('https://smp-gs/font/icomoon.eot');
+		src:url('https://smp-gs/font/icomoon.eot?#iefix') format('embedded-opentype'),
+			url('https://smp-gs/font/icomoon.svg#icomoon') 
+			format('svg'),url('https://smp-gs/font/icomoon.woff') 
+			format('woff'),url('https://smp-gs/font/icomoon.ttf') 
+			format('truetype');
+		font-weight:normal;
+		font-style:normal
+	}
+	
+	@font-face{
+		font-family:'tinymce-small';
+		src:url('https://smp-gs/font/icomoon-small.eot');
+		src:url('https://smp-gs/font/icomoon-small.eot?#iefix') 
+			format('embedded-opentype'),url('https://smp-gs/font/icomoon-small.svg#icomoon') 
+			format('svg'),url('https://smp-gs/font/icomoon-small.woff') 
+			format('woff'),url('https://smp-gs/font/icomoon-small.ttf') 
+			format('truetype');
+			font-weight:normal;
+			font-style:normal
+	}
+</style>
+<link href="css/animate.min.css" rel="stylesheet"><link href="css/material-design-iconic-font.min.css" rel="stylesheet"><script type="text/javascript" src="js/jquery.js"></script><script type="text/javascript" src="js/bootstrap-transition.js"></script><script type="text/javascript" src="js/bootstrap-alert.js"></script><script type="text/javascript" src="js/bootstrap-modal.js"></script><script type="text/javascript" src="js/bootstrap-dropdown.js"></script><script type="text/javascript" src="js/bootstrap-scrollspy.js"></script><script type="text/javascript" src="js/bootstrap-tab.js"></script><script type="text/javascript" src="js/bootstrap-tooltip.js"></script><script type="text/javascript" src="js/bootstrap-popover.js"></script><script type="text/javascript" src="js/bootstrap-button.js"></script><script type="text/javascript" src="js/bootstrap-collapse.js"></script><script type="text/javascript" src="js/bootstrap-carousel.js"></script><script type="text/javascript" src="js/bootstrap-typeahead.js"></script></head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+
+<div class="container">
+<div align="center">
+<div class="row">
+<div class="span4">
+<table border="0" width="100%" cellspacing="5px">
+<tbody><tr>
+<td align="center">
+<form action="https://tarakanita.afresto.id/smp-gs/home/login" class="form-signin" method="post" accept-charset="utf-8"><div style="display:none">
+<input type="hidden" name="id" value="">
+<input type="hidden" name="form" value="home/login">
+<input type="hidden" name="upload" value="">
+<input type="hidden" name="expire" value="1700949951">
+<input type="hidden" name="token" value="ef95c6fd71db0803ad1d7398e5d68210">
+</div> <h3 class="form-signin-heading" align="center">
+<font color="#585858">
+<b>AFRESTO CUY</b>
+</font></h3><font color="#585858">
+<div align="center">
+<table><tbody><tr><td><div align="center" id="logo"><img src="images/smp-gs.png" width="180" alt=""></div></td></tr></tbody></table>
+</div>
+<div id="title">
+<h2 class="form-signin-heading" align="center">
+<font color="#585858">
+<b>Login<b>
+</b></b></font><b><b>
+</b></b></h2><b><b>
+</b></b></div><b><b>
+<div style="max-width:300px">
+<div id="log27int">
+<input type="hidden" name="logint" value="ok">
+</div>
+<input type="text" name="username" class="input-block-level" placeholder="ID Fresto">
+<input type="password" name="password" class="input-block-level" placeholder="Password">
+
+<input id="submit" type="submit" name="submit" class="btn btn-success btn-block" value=" Sign in ">
+</div>
+
+<br>
+<div id="error"></div>
+<div id="my-signin2"></div>
+
+<br>Selamat datang di <b>Fresto</b> learning system (0 macintosh version)
+
+
+<div id="log_exambro"><div>
+<br>
+
+</div></div></b></b></font></form></td>
+</tr>
+</tbody></table>
+</div>
+<div class="span8">
+
+
+<table border="0" width="100%" cellspacing="5px" style="background-color: #DDDDDD;">
+<tbody><tr>
+<td align="center">
+<div class="form-signin">
+<h3><b>
+PENGUMUMAN
+<b></b></b></h3><b><b>
+<table border="0" width="100%" cellspacing="5px">
+<tbody><tr><td>
+<h3><p style="text-align: center;"><span style="color: #000080;">Selamat Datang di SMP Tarakanita Gading Serpong</span></p>
+<p style="text-align: center;"><img src="images/LLqxrgCcBcFSJ3uWcx7eLq5eaAbmzmAIdVnAn4RJ.png"></p></h3> </td></tr>
+</tbody></table> </b></b></div><b><b>
+</b></b></td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<script type="text/javascript">
+			
+			$('#title').addClass('animated zoomInDown');
+			function delayAnimation () {
+				var animatedEl = document.getElementById('title');
+				animatedEl.className = '';
+				setTimeout(function () {
+					animatedEl.className = 'animated tada';
+					setTimeout(delayAnimation, 5000);// i see 2.4s is your animation duration
+				}, 500)// wait 0.5s
+			}
+			setTimeout(delayAnimation, 3000);
+			
+			 $('#logo').addClass('animated flip');
+			function delayAnimation2 () {
+				var animatedEl = document.getElementById('logo');
+				animatedEl.className = '';
+				setTimeout(function () {
+					animatedEl.className = 'animated rubberBand';
+					setTimeout(delayAnimation2, 5000);// i see 2.4s is your animation duration
+				}, 500)// wait 0.5s
+			}
+			setTimeout(delayAnimation2, 5000);
+			/*
+			 $('#alert').addClass('animated flip');
+			function delayAnimation3 () {
+				var animatedEl = document.getElementById('alert');
+				animatedEl.className = 'alert alert-danger';
+				setTimeout(function () {
+					animatedEl.className = 'alert alert-danger animated flipInX';
+					setTimeout(delayAnimation3, 8000);// i see 2.4s is your animation duration
+				}, 500)// wait 0.5s
+			}
+			setTimeout(delayAnimation3, 7000);*/
+			
+			
+		
+	function onSignIn(googleUser) {
+		// Useful data for your client-side scripts:
+		var profile = googleUser.getBasicProfile();
+		console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+		console.log('Full Name: ' + profile.getName());
+		console.log('Given Name: ' + profile.getGivenName());
+		console.log('Family Name: ' + profile.getFamilyName());
+		console.log("Image URL: " + profile.getImageUrl());
+		console.log("Email: " + profile.getEmail());
+
+		// The ID token you need to pass to your backend:
+		var id_token = googleUser.getAuthResponse().id_token;
+		console.log("ID Token: " + id_token);
+
+
+	}
+				
+	function onSuccess(googleUser) {
+		console.log("ID: " + googleUser.getBasicProfile().getId());
+		console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+		
+		var xhr = new XMLHttpRequest();
+		xhr.open('POST', 'https://tarakanita.afresto.id/smp-gs/home/login');
+		xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+		xhr.onload = function() {
+		  //console.log('Signed in as: ' + xhr.responseText);
+			if(xhr.responseText=='"OK"'){
+				window.location.href = "https://tarakanita.afresto.id/smp-gs/";
+			}else{
+				document.getElementById('error').innerHTML = '<div class="alert alert-error">'+xhr.responseText+'</div>';
+			}
+		};
+		var id_token = googleUser.getAuthResponse().id_token;
+		xhr.send('idtoken=' + id_token);
+		
+		
+		
+    }
+    function onFailure(error) {
+        console.log(error);
+    }
+    function renderButton() {
+      gapi.signin2.render('my-signin2', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+	
+	if(window.AfrestoApp){
+		//console.log("menggunakan Afresto browser versi", AfrestoApp.getVersionCode());
+		//log_exambro
+		document.getElementById('log_exambro').innerHTML = "Browser Exambro";
+	}else{
+		//console.log("PAke browser biasa")
+		document.getElementById('log_exambro').innerHTML = "Browser Biasa";
+		
+	}
+
+	</script>
+
+<script src="js/platform.js" async="" defer=""></script>
+
+</body></html>
